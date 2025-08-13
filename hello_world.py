@@ -5,4 +5,13 @@ def hello_world():
 	print("I'm happy starting over with Python.")
 
 
+
+def hello_user(name):
+	print(f"Hello, {name}! Nice to meet you.")
+
+
 hello_world()
+
+name = input("What's your name? ")
+
+hello_user(name)
