@@ -1,7 +1,11 @@
 import random
 
-print("Testing how to use random numbers.")
+print("Playing with random numbers.")
 
-number = random.randint(1,6)
+for _ in range(1,10):
+	num = random.randint(1,6)
+	print(f"{num} ", end=" ")
 
-print(f"This is the random number: {number}")
+
+print()
+print(f"End of program")
