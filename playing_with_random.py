@@ -2,7 +2,7 @@ import random
 
 print("Playing with random numbers.")
 
-for _ in range(1,10):
+for _ in range(10):
 	num = random.randint(1,6)
 	print(f"{num} ", end=" ")
 
