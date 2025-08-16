@@ -1,46 +1,46 @@
 
-print("Willkommen zu deiner To-Do-Liste!")
-todo_list = []  # Leere Liste für Aufgaben
+print("Welcome to your To-Do-List!")
+todo_list = []  # Empty list for tasks 
 
 while True:
-    print("\nWas möchtest du tun?")
-    print("1 - Aufgabe hinzufügen")
-    print("2 - Aufgaben anzeigen")
-    print("3 - Aufgabe erledigen")
-    print("4 - Programm beenden")
+    print("\nWhat would you like to do?")
+    print("1 - Add a task")
+    print("2 - Show tasks")
+    print("3 - Complete a task")
+    print("4 - Exit program")
 
-    choice = input("Wähle eine Option: ")
+    choice = input("Choose an option: ")
 
     if choice == "1":
-        aufgabe = input("Welche Aufgabe soll hinzugefügt werden? ")
-        todo_list.append(aufgabe)
-        print(f"'{aufgabe}' wurde hinzugefügt.")
+        task = input("Which task should be added? ")
+        todo_list.append(task)
+        print(f"'{task}' has been added.")
 
     elif choice == "2":
         if len(todo_list) == 0:
-            print("Keine Aufgaben vorhanden.")
+            print("No tasks available.")
         else:
-            print("Deine Aufgaben:")
+            print("Your tasks:")
             for i, task in enumerate(todo_list, start=1):
                 print(f"{i}. {task}")
 
     elif choice == "3":
         if len(todo_list) == 0:
-            print("Keine Aufgaben zum Erledigen.")
+            print("No tasks to complete.")
         else:
             for i, task in enumerate(todo_list, start=1):
                 print(f"{i}. {task}")
-            num = int(input("Welche Aufgabe ist erledigt? (Nummer eingeben): "))
+            num = int(input("Which task is completed? (Enter number): "))
             if 1 <= num <= len(todo_list):
-                erledigt = todo_list.pop(num - 1)
-                print(f"'{erledigt}' wurde entfernt.")
+                completed = todo_list.pop(num - 1)
+                print(f"'{completed}' has been removed.")
             else:
-                print("Ungültige Nummer.")
+                print("Invalid number.")
 
     elif choice == "4":
-        print("Programm beendet. Bis bald!")
+        print("Program ended. See you soon!")
         break
 
     else:
-        print("Ungültige Eingabe, bitte erneut versuchen.")
+        print("Invalid input, please try again.")
 
