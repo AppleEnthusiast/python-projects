@@ -1,7 +1,7 @@
 print("Welcome to your Phonebook")
 
 contacts = {
-	"Anna": "0151- 1234567",
+	"Anna": "0151-1234567",
 	"Ben": "0170-7654321",
 	"Clara": "0160-9876543"
 }
