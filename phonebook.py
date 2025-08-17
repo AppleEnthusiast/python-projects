@@ -6,6 +6,7 @@ contacts = {
 	"Clara": "0160-9876543"
 }
 
+print("-" * 60)
 # print(contacts.items())
 
 print("Type 'list' to see all contacts or 'exit' to quit.")
@@ -23,5 +24,8 @@ while True:
 		print(f"{name}: {contacts[name]}")
 	else:
 		print(f"{name} is not in the phonebook.")
+
+
+print("-" * 60)
 
 
