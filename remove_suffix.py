@@ -6,17 +6,15 @@
 
 print("Willkommen! Dieses Programm entfernt die Endung von Dateinamen.")
 
-datei = input("Bitte Dateinamen eingeben: ")
+myFile = input("Bitte Dateinamen eingeben: ")
 
 index = datei.rfind(".")  
 if index != -1:
-    suffix = datei[index:] 
-    ohne_suffix = datei.removesuffix(suffix)
+    suffix = myFile[index:] 
+	print("Original:", myFile)
+	print("Gefundene Endung:", suffix if suffix else "Keine")
+    myFile = myFile.removesuffix(suffix)
+	print(f"Ohne Endung: {myFile}")
 else:
-    suffix = ""
-    ohne_suffix = datei
-
-print("Original:", datei)
-print("Gefundene Endung:", suffix if suffix else "Keine")
-print("Ohne Endung:", ohne_suffix)
+	print("Die Datei hat keine Endung")
 
