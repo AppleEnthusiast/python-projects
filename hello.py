@@ -1,9 +1,11 @@
 # this is my first file on the repository
 
 def hello_world():
-	print("Hello World")
-	print("I'm happy starting over with Python.")
-
+	msg = f"""
+		Hello, world!
+		I'm happy starting over with Python.
+	"""
+	print(msg)
 
 
 def hello_user(name):
