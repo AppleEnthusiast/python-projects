@@ -1,7 +1,8 @@
 print("Welcome to the Email Finder!\n")
+filename = input("Please enter filename: ")
 
 # open and read the file
-with open("text.txt", "r", encoding="utf-8":) as file:
+with open(filename, "r", encoding="utf-8":) as file:
     content = file.read()
 
 # look for '@'
