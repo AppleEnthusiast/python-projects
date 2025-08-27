@@ -1,0 +1,17 @@
+INFO - 2025-08-26 09:00:01 - Server started
+INFO - 2025-08-26 09:00:03 - Database connection established
+WARNING - 2025-08-26 09:15:22 - Response time exceeded 2000ms
+ERROR - 2025-08-26 09:15:45 - Lost connection to database
+INFO - 2025-08-26 09:16:01 - New user logged in: user123
+ERROR - 2025-08-26 09:16:14 - Disk write error
+INFO - 2025-08-26 09:16:45 - User user123 logged out
+WARNING - 2025-08-26 09:17:10 - Memory usage exceeded 90%
+INFO - 2025-08-26 09:18:00 - Backup started
+INFO - 2025-08-26 09:18:30 - Backup completed successfully
+ERROR - 2025-08-26 09:19:05 - Failed to connect to mail server
+INFO - 2025-08-26 09:20:00 - User admin logged in
+WARNING - 2025-08-26 09:21:11 - CPU load exceeded 90 percent
+INFO - 2025-08-26 09:22:00 - Admin executed system check
+ERROR - 2025-08-26 09:22:45 - System check reported critical failure
+INFO - 2025-08-26 09:23:30 - System check finished
+
