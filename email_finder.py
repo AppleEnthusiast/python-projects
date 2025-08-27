@@ -1,3 +1,6 @@
+import sys
+
+
 print("Welcome to the Email Finder!\n")
 filename = input("Please enter filename: ")
 
@@ -7,7 +10,7 @@ try:
     	content = file.read()
 except FileNotFoundError:
 	print("File was not found")
-	exit(1)
+	sys.exit(1)
 
 # look for '@'
 pos = content.find("@")
