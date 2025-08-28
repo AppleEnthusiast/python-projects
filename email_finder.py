@@ -9,8 +9,7 @@ try:
 	with open(filename, "r", encoding="utf-8") as file:
     	content = file.read()
 except FileNotFoundError:
-	print("File was not found")
-	sys.exit(1)
+	sys.exit("File was not found.")
 
 # look for '@'
 pos = content.find("@")
