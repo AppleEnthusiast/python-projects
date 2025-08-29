@@ -1,10 +1,12 @@
 from datetime import date
 
+print()
 print("Welcome to my Birthday Reminder".center(70))
 print()
 
 today = date.today()
-print(f"Today is {today.day}.{today.month}.{today.year}\n")
+# Display date in German style 
+print(f"Today is {today.day:02d}.{today.month:02d}.{today.year}\n")
 
 # User input
 name = input("Whose birthday should I remember? ").title()
@@ -17,20 +19,18 @@ except ValueError:
 
 # Try to build the birthday date for this year (catch invalid dates like 31.04)
 try:
-    birthday_this_year = date(today.year, month, day)
+    birthday = date(today.year, month, day)
 except ValueError:
-    print("That date does not exist. Please check day and month (e.g., 31.04 is invalid).")
+    print("That date does not exist.")
     raise SystemExit(1)
 
-print(f"\n{name} has a birthday on {day}.{month}.")
-
 # Determine the next birthday (this year or next year)
-if birthday_this_year < today:
-    next_birthday = date(today.year + 1, month, day)
-else:
-    next_birthday = birthday_this_year
+if birthday < today:
+    birthday = date(today.year + 1, month, day)
 
-days_left = (next_birthday - today).days
+days_left = (birthday - today).days
+
+print(f"\n{name} has a birthday on {birthday.day:02d}.{birthday.month:02d}.{birthday.year}")
 
 # Output
 if days_left == 0:
@@ -38,8 +38,5 @@ if days_left == 0:
 elif days_left == 1:
     print("The birthday is tomorrow.")
 else:
-    if next_birthday.year == today.year:
-        print(f"The birthday is still ahead — in {days_left} days.")
-    else:
-        print(f"The next birthday of {name} is in {days_left} days.")
+    print(f"The birthday is still ahead — in {days_left} days.")
 
